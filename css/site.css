@@ -1,0 +1,31 @@
+.hp-header .mdl-layout__header,
+.hp-header .mdl-layout__drawer-button {
+  color: rgba(255, 255, 255, 0.87)
+}
+
+.hp-content {
+  padding: 20px;
+}
+
+.hp-drawer {
+  border: none;
+}
+
+.hp-drawer-header {
+  height: 100px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  background: url(/images/drawer-header.jpg) center / cover;
+  display: flex;
+  align-items: center;
+}
+
+.hp-drawer-title {
+  margin: auto auto 10px auto;
+}
+
+/* Ignore Above */
+.hp-landing-image {
+  width: 100%;
+}
