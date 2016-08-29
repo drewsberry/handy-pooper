@@ -13,6 +13,34 @@
   background: transparent;
   margin-bottom: 0;
   background-color: #9debff;
+
+  color: white;
+  text-shadow: none;
+}
+
+.hp-navbar.navbar .navbar-nav>li>a {
+  color: white;
+  text-shadow: none;
+
+  transition: all .2s ease-in;
+}
+
+.hp-navbar.navbar .navbar-nav>li>a:hover {
+  color: #fc5a61;
+  text-shadow: 0 0 1px white;
+}
+
+.hp-navbar.navbar .navbar-nav>li.active>a {
+  background: #006f9c;
+
+  filter: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.hp-navbar.navbar .navbar-nav>li.active>a:hover {
+  color: #fc5a61;
+  text-shadow: 0 0 1px black;
 }
 
 .hp-brand.navbar-brand {
