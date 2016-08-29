@@ -1,6 +1,39 @@
+/* Light Blue: #9debff */
+/* Dark  Blue: #006f9c */
+
+/* Light Pink: #ff99ff */
+/* Dark  Pink: #fc5a61 */
+
 .hp-header .mdl-layout__header,
 .hp-header .mdl-layout__drawer-button {
   color: rgba(255, 255, 255, 0.87)
+}
+
+.hp-navbar {
+  background: transparent;
+  margin-bottom: 0;
+  background-color: #9debff;
+}
+
+.hp-brand.navbar-brand {
+  color: white;
+  text-shadow: none;
+
+  transition: all .2s ease-in;
+}
+
+.hp-brand.navbar-brand:hover {
+  color: #fc5a61;
+  text-shadow: 0 0 5px white;
+}
+
+header {
+  width: 100%;
+  min-height: 100%;
+  height: 200px;
+  background: url(../images/rose.jpg) center / cover;
+  position: relative;
+  text-align: center;
 }
 
 .hp-content {
@@ -28,4 +61,14 @@
 /* Ignore Above */
 .hp-landing-image {
   width: 100%;
+}
+
+.hp-grow {
+  transition: all .2 ease-in-out;
+}
+
+.hp-grow:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
