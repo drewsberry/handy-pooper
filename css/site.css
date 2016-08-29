@@ -13,6 +13,7 @@
   background: transparent;
   margin-bottom: 0;
   background-color: #9debff;
+  border: none;
 
   color: white;
   text-shadow: none;
@@ -99,4 +100,18 @@ header {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
+}
+
+/* Google Map of Wedding Location. */
+.hp-map {
+  width: 100%;
+  height: 500px;
+}
+
+.hp-map__info-title {
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.hp-map__info {
 }
