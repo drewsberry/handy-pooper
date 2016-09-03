@@ -1,38 +1,58 @@
+/* Copyright Drew Silcock (2016) */
+
+/* https://coolors.co/9debff-ff99ff-007ea7-003249-ccdbdc */
+
 /* Light Blue: #9debff */
 /* Dark  Blue: #006f9c */
 
+/* Nice Dark Blue: #2b5797 */
+
 /* Light Pink: #ff99ff */
 /* Dark  Pink: #fc5a61 */
+
+/* Light Purple: #730075 */
+/* Dark  Purple: #603cba */
 
 .hp-header .mdl-layout__header,
 .hp-header .mdl-layout__drawer-button {
   color: rgba(255, 255, 255, 0.87)
 }
 
+/* ==== Navbar ==== */
+
 .hp-navbar {
   background: transparent;
   margin-bottom: 0;
-  background-color: #9debff;
+  background-color: #003249;
   border: none;
 
   color: white;
   text-shadow: none;
 }
 
+.hp-navbar.navbar > .container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .hp-navbar.navbar .navbar-nav>li>a {
   color: white;
   text-shadow: none;
-
-  transition: all .2s ease-in;
+  border-radius: 100px;
+  transition: all .2s ease;
 }
 
 .hp-navbar.navbar .navbar-nav>li>a:hover {
-  color: #fc5a61;
-  text-shadow: 0 0 1px white;
+  background: #9dEbff;
+  /*color: #fc5a61;*/
+}
+
+.hp-navbar.navbar .navbar-nav>.hp-brand {
+  background: #9dEbff;
 }
 
 .hp-navbar.navbar .navbar-nav>li.active>a {
-  background: #006f9c;
+  background: #003249;
 
   filter: none;
   -webkit-box-shadow: none;
@@ -40,47 +60,59 @@
 }
 
 .hp-navbar.navbar .navbar-nav>li.active>a:hover {
-  color: #fc5a61;
-  text-shadow: 0 0 1px black;
+  /*color: #fc5a61;*/
 }
 
 .hp-brand.navbar-brand {
+  padding: 2px 20px;
   color: white;
   text-shadow: none;
+  position: relative;
+  width: 100px;
 
-  transition: all .2s ease-in;
+  transition: all .1s ease;
 }
 
 .hp-brand.navbar-brand:hover {
-  color: #fc5a61;
-  text-shadow: 0 0 5px white;
+  color: #9dEbff;
+  text-shadow: 0 0 1px white;
 }
 
-header {
-  width: 100%;
-  min-height: 100%;
-  height: 200px;
-  background: url(../images/rose.jpg) center / cover;
-  position: relative;
-  text-align: center;
+.hp-brand.navbar-brand .hp-brand__logo-birds,
+.hp-brand.navbar-brand .hp-brand__logo-ring {
+  height: 100%;
+  position: absolute;
+  top: 0;
 }
+
+.hp-brand__logo-ring {
+  opacity: 0;
+  transition: opacity .1s ease;
+}
+
+.hp-brand__logo-ring:hover {
+  opacity: 1;
+}
+
+/* ==== Main Content ==== */
 
 .hp-content {
   padding: 20px;
 }
 
-.hp-drawer {
+/* ==== Header Image ==== */
+
+.hp-header__container {
   border: none;
 }
 
-.hp-drawer-header {
-  height: 100px;
+.hp-header {
+  height: 512px;
   background-color: grey;
   color: white;
   text-align: center;
-  background: url(/images/drawer-header.jpg) center / cover;
-  display: flex;
-  align-items: center;
+  background: url(../images/rose.jpg) center / cover;
+  text-align: center;
 }
 
 .hp-drawer-title {
@@ -102,7 +134,7 @@ header {
   transform: scale(1.1);
 }
 
-/* Google Map of Wedding Location. */
+/* ==== Google Map of Wedding Location ==== */
 .hp-map {
   width: 100%;
   height: 500px;
