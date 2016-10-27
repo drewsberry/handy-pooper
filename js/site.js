@@ -5,10 +5,9 @@
 function scrollToId(targetId) {
   var $targetElement = $('#' + targetId);
 
-  $('html,body').animate(
-      { scrollTop: $targetElement.offset().top },
-      'slow',
-      'swing');
+  $('html,body').animate({
+    scrollTop: $targetElement.offset().top,
+  }, 'slow', 'swing');
 }
 
 function initialiseMap() {
@@ -45,6 +44,19 @@ function initialiseMap() {
   });
 }
 
+function initialiseCountdown() {
+  const $clock = $('.hp-header__countdown');
+  const weddingDate = new Date(2017, 5, 17, 12);
+  const secondsToWedding = (weddingDate - new Date) * 0.001;
+
+  const clock = $clock.FlipClock(secondsToWedding, {
+    clockFace: 'DailyCounter',
+    countdown: true,
+    showSeconds: false,
+  });
+}
+
 $(function() {
   initialiseMap();
+  initialiseCountdown();
 });

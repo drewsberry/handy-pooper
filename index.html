@@ -21,10 +21,16 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
           rel="stylesheet" crossorigin="anonymous">
 
-    <!-- Optional theme -->
+    <!-- Optional Bootstrap theme -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
           integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
           rel="stylesheet" crossorigin="anonymous">
+
+    <!-- FlipClock CSS -->
+    <link rel="stylesheet" href="/css/flipclock.css">
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico|Playfair+Display">
 
     <!-- Styles -->
     <link rel="stylesheet" href="/css/site.css">
@@ -41,6 +47,11 @@
       integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
       crossorigin="anonymous"></script>
 
+    <!-- FlipClock -->
+    <!-- TODO: Integrity for this script too, why not? -->
+    <script defer
+      src="/js/flipclock.min.js"></script>
+
     <!-- Bootstrap JS -->
     <script defer
       src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
@@ -51,6 +62,7 @@
     <script defer
       src="https://cdn.jsdelivr.net/scrollreveal.js/3.2.0/scrollreveal.min.js"></script>
 
+    <!-- Google Maps JS -->
     <script defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQSOdCIJqel4Fz-XGjgst-qtDe69bgwCE"></script>
 
@@ -86,26 +98,50 @@
     <header>
       <div class="hp-header__container">
         <div class="hp-header">
+          <div class="hp-header__inner">
+            <h1 class="hp-header__title">
+              <span class="hp-header__title-hannah">Hannah</span>
+              &
+              <span class="hp-header__title-andy">Andy</span>
+            </h1>
+
+            <div class="hp-header__countdown--container">
+              <div class="hp-header__countdown"></div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
 
     <main class="container">
       <div class="starter-template">
-        <h1>Handy Pooper</h1>
+        <h1 class="hp-lead">Hannah and Andy are getting married!</h1>
         <p class="lead">This is the lead content.<br>This is where the descriptiony stuff goes, I guess.</p>
       </div>
 
-      <section style="height: 500px;" id="introduction">
+      <section style="height: 500px;" id="introduction" class="hp-section">
+        <div class="hp-layout__left">
           <div class="hp-map"></div>
+        </div>
+        <div class="hp-layout__right">
+          Introduction text.
+        </div>
       </section>
 
-      <section style="height: 500px;" id="location">
+      <section style="height: 500px;" id="location" class="hp-section">
+        <div class="hp-layout__left">
+        </div>
+        <div class="hp-layout__right">
           Tomorrow, and tomorrow, and tomorrow.
+        </div>
       </section>
 
-      <section style="height: 500px;" id="accommodation">
+      <section style="height: 500px;" id="accommodation" class="hp-section">
+        <div class="hp-layout__left">
+        </div>
+        <div class="hp-layout__right">
           Creeps in this petty pace from day to day.
+        </div>
       </section>
     </main>
   </body>

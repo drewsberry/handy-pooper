@@ -13,6 +13,11 @@
 /* Light Purple: #730075 */
 /* Dark  Purple: #603cba */
 
+html,
+body {
+  font-family: 'Playfair Display', serif;
+}
+
 .hp-header .mdl-layout__header,
 .hp-header .mdl-layout__drawer-button {
   color: rgba(255, 255, 255, 0.87)
@@ -134,7 +139,74 @@
   transform: scale(1.1);
 }
 
+.hp-header__title {
+  margin: 0;
+  padding-top: 15px;
+  font-family: 'Pacifico', cursive;
+}
+
+.hp-header__title-hannah {
+  color: #ffc9c9;
+}
+
+.hp-header__title-andy {
+  color: #b7f0ff;
+}
+
+/* Leading text below header. */
+.hp-lead {
+  text-align: center;
+}
+
+/* ==== Left-right layout for main content ==== */
+
+.hp-section {
+  display: flex;
+
+  margin: 30px 0;
+}
+
+.hp-layout__left {
+  background-color: #ff9e2c;
+  flex: 1;
+  padding: 1rem;
+}
+
+.hp-layout__right {
+  background-color: #b6701e;
+  flex: 1;
+  padding: 1rem;
+}
+
+/* ==== Countdown ==== */
+
+.hp-header__countdown--container {
+  text-align: center;
+
+  position: relative;
+  top: 320px;
+}
+
+.hp-header__countdown {
+  width: auto;
+  display: inline-block;
+}
+
+.hp-header__countdown .flip-clock-divider .flip-clock-label {
+  font-family: 'Pacifico', cursive;
+  color: white;
+  font-size: large;
+}
+
+/* Change the background colour of the tiles. */
+.flip-clock-wrapper ul li a div div.inn {
+  background-color: #ffc9c9;
+  color: white;
+  text-shadow: 0 1px 2px #2d2d2d;
+}
+
 /* ==== Google Map of Wedding Location ==== */
+
 .hp-map {
   width: 100%;
   height: 500px;
@@ -146,4 +218,14 @@
 }
 
 .hp-map__info {
+}
+
+/* ==== Fonts ==== */
+
+.hp-font__normal {
+  font-family: 'Playfair Display', serif;
+}
+
+.hp-font__cursive {
+  font-family: 'Pacifico', cursive;
 }
