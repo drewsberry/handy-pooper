@@ -40,14 +40,18 @@ body {
   margin-bottom: 10px;
 }
 
-.hp-navbar.navbar .navbar-nav>li>a {
+.hp-navbar.navbar .navbar-nav>li>.hp-navlink {
   color: white;
   text-shadow: none;
   border-radius: 100px;
   transition: all .2s ease;
+
+  background-color: transparent;
+  padding: 15px;
+  border: none;
 }
 
-.hp-navbar.navbar .navbar-nav>li>a:hover {
+.hp-navbar.navbar .navbar-nav>li>.hp-navlink:hover {
   background: #9dEbff;
   /*color: #fc5a61;*/
 }
@@ -56,7 +60,7 @@ body {
   background: #9dEbff;
 }
 
-.hp-navbar.navbar .navbar-nav>li.active>a {
+.hp-navbar.navbar .navbar-nav>li.active>.hp-navlink {
   background: #003249;
 
   filter: none;
@@ -64,7 +68,7 @@ body {
   box-shadow: none;
 }
 
-.hp-navbar.navbar .navbar-nav>li.active>a:hover {
+.hp-navbar.navbar .navbar-nav>li.active>.hp-navlink:hover {
   /*color: #fc5a61;*/
 }
 
@@ -109,6 +113,7 @@ body {
 
 .hp-header__container {
   border: none;
+  padding: 10px 0;
 }
 
 .hp-header {
@@ -116,8 +121,41 @@ body {
   background-color: grey;
   color: white;
   text-align: center;
-  background: url(../images/rose.jpg) center / cover;
+  background: url(../images/fox-tower-circle.jpg) center / contain;
+  background-repeat: no-repeat;
   text-align: center;
+
+  /*
+  background-image: url(../images/fox-tower.jpg);
+  background-image: linear-gradient(left, 
+    rgba(0,0,0,0.9) 0%, 
+    rgba(0,0,0,0) 20%,
+    rgba(0,0,0,0) 80%,
+    rgba(0,0,0,0.9) 100%
+  ),
+  url(../images/fox-tower.jpg);
+  */
+
+  background-image: linear-gradient(left, 
+      rgba(0,0,0,0.9) 0%, 
+      rgba(0,0,0,0) 20%,
+      rgba(0,0,0,0) 80%,
+      rgba(0,0,0,0.9) 100%
+    ) center / cover,
+    url(http://bit.ly/YEG3KR) center / cover;
+}
+
+.hp-header:before {
+  /*content: "";*/
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  height: 512px;
+
+  background: url(../images/fox-tower.jpg) center/ cover;
+  filter: blur(10px);
 }
 
 .hp-drawer-title {
@@ -143,6 +181,7 @@ body {
   margin: 0;
   padding-top: 15px;
   font-family: 'Pacifico', cursive;
+  text-shadow: 0 3px 2px rgb(69, 67, 67);
 }
 
 .hp-header__title-hannah {
@@ -154,26 +193,45 @@ body {
 }
 
 /* Leading text below header. */
-.hp-lead {
+.hp-title,
+.hp-lead
+{
   text-align: center;
+}
+
+/* Section title style */
+.hp-section-title {
+  font-style: italic;
+  font-size: 40px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+
+  color: #555;
+  border-bottom: ridge #555;
+}
+
+.hp-section-title__icon {
+  float: right;
+}
+
+/* Section paragraph style */
+.hp-section-paragraph {
+  font-size: large;
 }
 
 /* ==== Left-right layout for main content ==== */
 
 .hp-section {
   display: flex;
-
   margin: 30px 0;
 }
 
 .hp-layout__left {
-  background-color: #ff9e2c;
   flex: 1;
   padding: 1rem;
 }
 
 .hp-layout__right {
-  background-color: #b6701e;
   flex: 1;
   padding: 1rem;
 }
@@ -203,6 +261,11 @@ body {
   background-color: #ffc9c9;
   color: white;
   text-shadow: 0 1px 2px #2d2d2d;
+}
+
+/* Override colour of colons. */
+.flip-clock-dot {
+  background: white;
 }
 
 /* ==== Google Map of Wedding Location ==== */

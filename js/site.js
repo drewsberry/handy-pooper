@@ -46,7 +46,7 @@ function initialiseMap() {
 
 function initialiseCountdown() {
   const $clock = $('.hp-header__countdown');
-  const weddingDate = new Date(2017, 5, 17, 12);
+  const weddingDate = new Date(2017, 5, 17, 14);
   const secondsToWedding = (weddingDate - new Date) * 0.001;
 
   const clock = $clock.FlipClock(secondsToWedding, {
@@ -56,7 +56,24 @@ function initialiseCountdown() {
   });
 }
 
+function initialiseScrollers() {
+  const $scrollers = $('.hp-scroller');
+
+  $scrollers.each(function(index, element) {
+    const $element = $(element);
+    const scrollToSelector = $element.data('scroll-to');
+    const $scrollToElement = $(scrollToSelector);
+
+    $element.on('click', function() {
+      $('html,body').animate({
+        scrollTop: $scrollToElement.offset().top,
+      }, 'slow', 'easeInOutSine');
+    });
+  });
+}
+
 $(function() {
   initialiseMap();
   initialiseCountdown();
+  initialiseScrollers();
 });
