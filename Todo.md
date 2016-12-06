@@ -8,3 +8,4 @@
 * Make scroll-over animations a bit more fancy.
 * Insert "Back to top" button.
 * Remove "Home" button as its not really being used.
+* Use tinyjpg and/or tinypng to compress all assets. It's really a wonderful tool.
