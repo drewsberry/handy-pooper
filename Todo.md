@@ -9,3 +9,5 @@
 * Insert "Back to top" button.
 * Remove "Home" button as its not really being used.
 * Use tinyjpg and/or tinypng to compress all assets. It's really a wonderful tool.
+* Add images to other side of dual pane sections, with nice little triangles like in [this site](http://lsproductions.com/).
+* Add copyright information in. Creative commons?
