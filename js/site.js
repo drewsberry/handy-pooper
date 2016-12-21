@@ -10,6 +10,12 @@ function scrollToId(targetId) {
   }, 'slow', 'swing');
 }
 
+function scrollToTop() {
+  $('html,body').animate({
+    scrollTop: 0,
+  }, 'slow', 'swing');
+}
+
 function initialiseMap() {
   var farnhamCastleLocation = {
     lat: 51.2186021,
@@ -72,8 +78,33 @@ function initialiseScrollers() {
   });
 }
 
+function initialiseScrollToTopButton() {
+  var $mainContent = $('main');
+  var mainContentScrollPosition = $mainContent.offset().top;
+
+  $(window).on('scroll', function () {
+    var currentScrollPosition = $(this).scrollTop();
+
+    if (currentScrollPosition > mainContentScrollPosition) {
+      $('#back-to-top').fadeIn();
+    } else {
+      $('#back-to-top').fadeOut();
+    }
+  });
+
+  // scroll body to 0px on click
+  var $backToTop = $('#back-to-top');
+  $backToTop.on('click', function (evt) {
+    scrollToTop();
+    evt.preventDefault();
+  });
+
+  $backToTop.tooltip('show');
+}
+
 $(function() {
   initialiseMap();
   initialiseCountdown();
   initialiseScrollers();
+  initialiseScrollToTopButton();
 });
