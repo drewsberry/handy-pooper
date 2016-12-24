@@ -217,6 +217,61 @@ body {
 /* Section paragraph style */
 .hp-section-paragraph {
   font-size: large;
+  margin: 25px 0;
+}
+
+.hp-address {
+  font-size: large;
+}
+
+/* ==== Timeline ==== */
+
+.hp-timeline__section-title {
+  width: 83%;
+  position: absolute;
+}
+
+.hp-timeline {
+  padding-top: 125px;
+  margin: auto;
+}
+
+.hp-timeline__title {
+  float: left;
+}
+
+.hp-timeline__time {
+  float: right;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+/* ==== Timeline Icons ==== */
+
+/* Two rings together */
+.hp-ring-left {
+  position: relative;
+  left: 7px;
+}
+.hp-ring-right {
+  position: relative;
+  right: 7px;
+}
+
+.hp-timeline .timeline .timeline-badge {
+  background: #9dEbff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+  transition: all .2s ease-in-out;
+}
+
+.hp-timeline .timeline .timeline-badge:hover {
+  transform: scale(2);
+}
+
+.hp-timeline .timeline .timeline-inverted .timeline-badge {
+  background: #ffc9c9;
 }
 
 /* ==== Back to Top Button ==== */
