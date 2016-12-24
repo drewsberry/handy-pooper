@@ -18,8 +18,8 @@ function scrollToTop() {
 
 function initialiseMap() {
   var farnhamCastleLocation = {
-    lat: 51.2186021,
-    lng: -0.8049171,
+    lat: 51.219032,
+    lng: -0.802639,
   };
 
   var mapElement = $('.hp-map').get(0);
