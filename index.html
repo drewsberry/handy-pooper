@@ -17,8 +17,7 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00d5f2">
     <meta name="theme-color" content="#2b5797">
 
-    <!-- Font Awesome JavaScript CDN -->
-    <script src="https://use.fontawesome.com/e12e129156.js"></script>
+    <!-- ==== Style Sheets ==== -->
 
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
@@ -46,7 +45,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- Scripts -->
+    <!-- ==== Scripts ==== -->
 
     <!-- jQuery -->
     <script defer
@@ -56,11 +55,6 @@
 
     <script defer
       src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-    <!-- FlipClock -->
-    <!-- TODO: Integrity for this script too, why not? -->
-    <script defer
-      src="/js/flipclock.min.js"></script>
 
     <!-- Bootstrap JS -->
     <script defer
@@ -76,7 +70,21 @@
     <script defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQSOdCIJqel4Fz-XGjgst-qtDe69bgwCE"></script>
 
-    <script defer src="js/site.js"></script>
+    <!-- FlipClock -->
+    <script defer
+      src="/js/flipclock.min.js"></script>
+
+    <!-- Custom Site JS -->
+    <script defer
+      src="js/site.js"></script>
+
+    <!-- Font Awesome JavaScript CDN -->
+    <script async defer
+      src="https://use.fontawesome.com/e12e129156.js"></script>
+
+    <!-- GitHub Button -->
+    <script async defer
+      src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body>
     <nav class="hp-navbar navbar navbar-inverse navbar-static-top">
@@ -89,6 +97,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <a class="hp-brand hp-brand__logo navbar-brand" href="#">
             <img class="hp-brand__logo-birds" src="../images/logo-birds.png" alt="logo - birds">
@@ -97,9 +107,11 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><button class="hp-navlink hp-scroller" data-scroll-to="#introduction">About</a></li>
-            <li><button class="hp-navlink hp-scroller" data-scroll-to="#location">Contact</a></li>
+            <li><button class="hp-navlink hp-scroller" data-scroll-to="#location">Location</a></li>
+            <li><button class="hp-navlink hp-scroller" data-scroll-to="#timeline">Timeline</a></li>
+            <li><button class="hp-navlink hp-scroller" data-scroll-to="#on-the-day">On The Day</a></li>
             <li><button class="hp-navlink hp-scroller" data-scroll-to="#accommodation">Accommodation</a></li>
+            <li><button class="hp-navlink hp-scroller" data-scroll-to="#gift-list">Gift List</a></li>
           </ul>
         </div>
       </div>
@@ -417,20 +429,24 @@
           </h2>
 
           <p class="hp-section-paragraph">
-            At vero eos et accusamus et iusto odio dignissimos ducimus qui
-            blanditiis praesentium voluptatum deleniti atque corrupti quos
-            dolores et quas molestias excepturi sint occaecati cupiditate non
-            provident, similique sunt in culpa qui officia deserunt mollitia
-            animi, id est laborum et dolorum fuga. Et harum quidem rerum
-            facilis est et expedita distinctio. Nam libero tempore, cum soluta
-            nobis est eligendi optio cumque nihil impedit quo minus id quod
-            maxime placeat facere possimus, omnis voluptas assumenda est, omnis
-            dolor repellendus. Temporibus autem quibusdam et aut officiis
-            debitis aut rerum necessitatibus saepe eveniet ut et voluptates
-            repudiandae sint et molestiae non recusandae. Itaque earum rerum
-            hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus
-            maiores alias consequatur aut perferendis doloribus asperiores
-            repellat.
+            We are delighted just to have your company at our wedding and to
+            share our day with you, but if you felt you wanted to give a gift
+            we have 2 options:
+          </p>
+
+          <h3>Option 1</h3>
+          <p class="hp-section-paragraph">
+            We will have a John Lewis gift list which will be accessible from
+            the 6th May 2017. We will post a link when this is available.
+          </p>
+
+          <h3>Option 2</h3>
+          <p class="hp-section-paragraph">
+            We have a honeymoon gift list where you can
+            <a href="https://www.audleygiftservice.com/hannah-and-andrew"
+               target="_blank" rel="noopener noreferrer">
+              gift us a treat for our Costa Rica honeymoon
+            </a>.
           </p>
         </div>
         <div class="hp-layout__right hp-layout__image">
@@ -444,5 +460,31 @@
         <span class="fa fa-chevron-up" aria-hidden="true"></span>
       </a>
     </main>
+
+    <footer class="hp-footer">
+      <div class="hp-footer__container">
+        <a id="bottom"></a>
+
+        <div class="hp-footer__left">
+          <div class="hp-footer__left-inner">
+            <a class="github-button" href="https://github.com/drewsberry/handy-pooper"
+               data-icon="octicon-star" data-style="mega"
+               aria-label="Star drewsberry/handy-pooper on GitHub">Star</a>
+          </div>
+        </div>
+
+        <div class="hp-footer__middle">
+          Copyright © 2016 - Drew Silcock
+        </div>
+
+        <div class="hp-footer__right">
+          <div class="hp-footer__right-inner">
+            <a class="github-button" href="https://github.com/drewsberry/handy-pooper/fork"
+               data-icon="octicon-repo-forked" data-style="mega"
+               aria-label="Fork drewsberry/handy-pooper on GitHub">Fork</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
