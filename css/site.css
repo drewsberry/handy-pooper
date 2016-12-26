@@ -13,6 +13,9 @@
 /* Light Purple: #730075 */
 /* Dark  Purple: #603cba */
 
+/* Hannah's Pink: #ffc9c9 */
+/* Andy's Blue:  #b7f0ff */
+
 html,
 body {
   font-family: 'Playfair Display', serif;
@@ -365,6 +368,29 @@ body {
 }
 
 .hp-map__info {
+}
+
+/* ==== Section Images ==== */
+
+.hp-layout__image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  border-radius: 100%;
+  margin: 20px;
+}
+
+#on-the-day .hp-layout__image {
+  background-image: url(../images/chef.jpg);
+}
+
+#accommodation .hp-layout__image {
+  background-image: url(../images/hotel.jpg);
+}
+
+#gift-list .hp-layout__image {
+  background-image: url(../images/present.jpg);
 }
 
 /* ==== Fonts ==== */
