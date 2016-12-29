@@ -126,14 +126,6 @@ body {
   background: url(../images/fox-tower-circle.jpg) center / contain;
   background-repeat: no-repeat;
   text-align: center;
-
-  background-image: linear-gradient(left, 
-      rgba(0,0,0,0.9) 0%, 
-      rgba(0,0,0,0) 20%,
-      rgba(0,0,0,0) 80%,
-      rgba(0,0,0,0.9) 100%
-    ) center / cover,
-    url(http://bit.ly/YEG3KR) center / cover;
 }
 
 .hp-drawer-title {

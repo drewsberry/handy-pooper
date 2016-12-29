@@ -94,7 +94,7 @@ function initialiseScrollToTopButton() {
 
   // scroll body to 0px on click
   var $backToTop = $('#back-to-top');
-  $backToTop.on('click', function scrollToTop(evt) {
+  $backToTop.on('click', function scrollToTopWithEvent(evt) {
     scrollToTop();
     evt.preventDefault();
   });
@@ -102,9 +102,19 @@ function initialiseScrollToTopButton() {
   $backToTop.tooltip('show');
 }
 
+// Reveal sections only when you scroll to them with ScrollReveal.js.
+function initialiseReveal() {
+  window.sr = ScrollReveal();
+  sr.reveal('.hp-layout__image', { duration: 2000, delay: 500 });
+  sr.reveal('.hp-map');
+  sr.reveal('.gm-style');
+  sr.reveal('.timeline-panel', { duration: 2000 });
+}
+
 $(function() {
   initialiseMap();
   initialiseCountdown();
   initialiseScrollers();
   initialiseScrollToTopButton();
+  initialiseReveal();
 });
