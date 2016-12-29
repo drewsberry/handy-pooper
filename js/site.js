@@ -105,10 +105,10 @@ function initialiseScrollToTopButton() {
 // Reveal sections only when you scroll to them with ScrollReveal.js.
 function initialiseReveal() {
   window.sr = ScrollReveal();
-  sr.reveal('.hp-layout__image', { duration: 2000, delay: 500 });
+  sr.reveal('.hp-layout__image', { duration: 1000 });
   sr.reveal('.hp-map');
   sr.reveal('.gm-style');
-  sr.reveal('.timeline-panel', { duration: 2000 });
+  sr.reveal('.hp-timeline .timeline li', { duration: 2000, delay: 250 });
 }
 
 $(function() {

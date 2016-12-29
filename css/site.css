@@ -228,6 +228,20 @@ body {
   font-size: x-large;
 }
 
+.hp-timeline li .timeline-panel {
+  transition: transform .2s ease-in-out;
+  transform-origin: right;
+}
+
+.hp-timeline li.timeline-inverted .timeline-panel {
+  transform-origin: left;
+}
+
+.hp-timeline li:hover .timeline-panel,
+.hp-timeline li:focus .timeline-panel{
+  transform: scale(1.1);
+}
+
 /* ==== Timeline Icons ==== */
 
 /* Two rings together */
@@ -242,19 +256,29 @@ body {
 
 .hp-timeline .timeline .timeline-badge {
   background: #9dEbff;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-              0 3px 10px 0 rgba(0, 0, 0, 0.19);
-
-  transition: all .2s ease-in-out;
-}
-
-.hp-timeline .timeline .timeline-badge:hover,
-.hp-timeline .timeline .timeline-badge:focus {
-  transform: scale(1.2);
 }
 
 .hp-timeline .timeline .timeline-inverted .timeline-badge {
   background: #ffaaaa;
+}
+
+.hp-timeline .timeline li .timeline-badge::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+              0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  opacity: 0;
+  transition: opacity .2s ease-in-out;
+}
+
+.hp-timeline .timeline li:hover .timeline-badge::after,
+.hp-timeline .timeline li:focus .timeline-badge::after {
+  opacity: 1;
 }
 
 /* ==== Back to Top Button ==== */
@@ -301,10 +325,8 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 100%;
-
-  /* Positioning is off for some reason; correct it manually. */
-  top: -1%;
-  left: -1%;
+  top: 0;
+  left: 0;
 
   box-shadow: 0 2px 10px #7f7f7f;
   opacity: 0;
