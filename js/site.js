@@ -29,9 +29,9 @@ function initialiseMap() {
   });
 
   var marker = new google.maps.Marker({
+    'title': 'Farnham Castle',
     position: farnhamCastleLocation,
     map: map,
-    'title': 'Farnham Castle',
     animation: google.maps.Animation.DROP,
   });
 
@@ -82,7 +82,7 @@ function initialiseScrollToTopButton() {
   var $mainContent = $('main');
   var mainContentScrollPosition = $mainContent.offset().top;
 
-  $(window).on('scroll', function () {
+  $(window).on('scroll', function triggerFadeInOut() {
     var currentScrollPosition = $(this).scrollTop();
 
     if (currentScrollPosition > mainContentScrollPosition) {
@@ -94,7 +94,7 @@ function initialiseScrollToTopButton() {
 
   // scroll body to 0px on click
   var $backToTop = $('#back-to-top');
-  $backToTop.on('click', function (evt) {
+  $backToTop.on('click', function scrollToTop(evt) {
     scrollToTop();
     evt.preventDefault();
   });
