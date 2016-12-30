@@ -301,6 +301,71 @@ body {
   opacity: 1;
 }
 
+/* ==== On The Day Section ==== */
+
+.hp-menu {
+  font-size: large;
+}
+
+.hp-menu .hp-course__starter,
+.hp-menu .hp-course__dessert,
+.hp-menu .hp-course__starter .panel-heading,
+.hp-menu .hp-course__dessert .panel-heading {
+  border-color: #f1a1a1;
+}
+
+.hp-menu .hp-course__starter .panel-heading,
+.hp-menu .hp-course__dessert .panel-heading {
+  background: #ffaaaa;
+}
+
+.hp-menu .hp-course__main,
+.hp-menu .hp-course__main .panel-heading {
+  border-color: #b0e1ef;
+}
+
+.hp-menu .hp-course__main .panel-heading {
+  background: #b6f0ff;
+}
+
+.hp-menu .panel-title {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.hp-menu .hp-menu__or {
+  font-family: 'Pacifico', cursive;
+  text-transform: uppercase;
+  text-align: center;
+  width: 100%;
+
+  /* Make position of line in after pseudoelement relative to this element. */
+  position: relative;
+
+  /* Allow line in after pseudoelement to be behind text. */
+  z-index: 2;
+}
+
+.hp-menu .hp-menu__or::before,
+.hp-menu .hp-menu__or::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  background: #ddd;
+  width: 45%;
+  display: block;
+  z-index: -1;
+}
+
+.hp-menu .hp-menu__or::before {
+  left: 0;
+}
+
+.hp-menu .hp-menu__or::after {
+  left: 55%;
+}
+
 /* ==== Accommodation Section ==== */
 
 /* Attribution text for photos of hotels. */

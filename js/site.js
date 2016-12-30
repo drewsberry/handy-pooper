@@ -113,6 +113,7 @@ function initialiseReveal() {
   sr.reveal('.hp-map');
   sr.reveal('.gm-style');
   sr.reveal('.hp-timeline .timeline li', { duration: 2000, delay: 50 });
+  sr.reveal('.hp-course', { duration: 1000 });
   sr.reveal('.hp-thumbnail', { duration: 2000 }, 200);
 }
 
