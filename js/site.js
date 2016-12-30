@@ -83,7 +83,7 @@ function initialiseScrollToTopButton() {
   var $mainContent = $('main');
   var mainContentScrollPosition = $mainContent.offset().top;
 
-  $(window).on('scroll', function triggerFadeInOut() {
+  var triggerFadeInOut = function () {
     var currentScrollPosition = $(this).scrollTop();
 
     if (currentScrollPosition > mainContentScrollPosition) {
@@ -91,7 +91,10 @@ function initialiseScrollToTopButton() {
     } else {
       $('#back-to-top').fadeOut();
     }
-  });
+  };
+
+  $(window).on('scroll', triggerFadeInOut);
+  triggerFadeInOut();
 
   // scroll body to 0px on click
   var $backToTop = $('#back-to-top');
@@ -109,7 +112,8 @@ function initialiseReveal() {
   sr.reveal('.hp-layout__image', { duration: 1000 });
   sr.reveal('.hp-map');
   sr.reveal('.gm-style');
-  sr.reveal('.hp-timeline .timeline li', { duration: 2000, delay: 250 });
+  sr.reveal('.hp-timeline .timeline li', { duration: 2000, delay: 50 });
+  sr.reveal('.hp-thumbnail', { duration: 2000 }, 200);
 }
 
 $(function() {

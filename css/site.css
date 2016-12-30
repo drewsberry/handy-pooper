@@ -281,16 +281,38 @@ body {
   opacity: 1;
 }
 
+/* ==== Accommodation Section ==== */
+
+/* Attribution text for photos of hotels. */
+.hp-attribution {
+  font-size: 6pt;
+  text-align: center;
+  color: #6f6f6f;
+}
+
+/* Attribution takes up space so reduce padding below. */
+.thumbnail .caption {
+  padding-top: 0;
+  margin-top: -10px;
+}
+
+/* ==== General Purpose Text Styles ==== */
+
+.hp-text__center {
+  text-align: center;
+}
+
 /* ==== Back to Top Button ==== */
 
 .hp-button {
   background: #003249;
   border: #9dEbff;
 
-  /* Make circle */
-  border-radius: 100%;
-
   transition: background .2s ease-in-out;
+}
+
+.hp-button__oval {
+  border-radius: 100%;
 }
 
 .hp-button:hover,
