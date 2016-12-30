@@ -10,5 +10,5 @@
 * ~~Remove "Home" button as its not really being used.~~
 * ~~Use tinyjpg and/or tinypng to compress all assets. It's really a wonderful tool.~~ **It really is...**
 * Consider nice little triangles like in [this site](http://lsproductions.com/).
-* Add copyright information in. Creative commons?
+* ~~Add copyright information for code and content (Creative Commons)?~~
 * Optimise using YSlow, Pingdom, etc.
