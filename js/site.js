@@ -1,4 +1,4 @@
-// Copyright Drew Silcock (2016)
+// Copyright © 2016 - Drew Silcock
 
 'use strict';
 
@@ -59,6 +59,7 @@ function initialiseCountdown() {
     clockFace: 'DailyCounter',
     countdown: true,
     showSeconds: false,
+    minimumDigits: 7,
   });
 }
 

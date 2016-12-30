@@ -368,6 +368,7 @@ body {
   font-family: 'Pacifico', cursive;
   color: white;
   font-size: large;
+  z-index: 10; /* Put above countdown numbers. */
 }
 
 /* Change the background colour of the tiles. */
@@ -380,6 +381,57 @@ body {
 /* Override colour of colons. */
 .flip-clock-dot {
   background: white;
+}
+
+/* ==== FlipClock Size ==== */
+
+@media (min-width: 575px) {
+  .hp-header__countdown .flip-clock-divider.days .flip-clock-label {
+      right: -122px;
+  }
+
+  .hp-header__countdown .flip-clock-divider.hours .flip-clock-label {
+      right: -92px;
+  }
+
+  .hp-header__countdown .flip-clock-divider.minutes .flip-clock-label {
+      right: -100px;
+  }
+}
+
+@media (max-width: 575px) {
+  .flip-clock-wrapper ul {
+    width: 40px;
+    height: 78px;
+    margin: 0 2px;
+  }
+
+  .flip-clock-wrapper ul li {
+    line-height: 78px;
+  }
+
+  .flip-clock-wrapper ul li a div div.inn {
+    border-radius: 3px;
+    font-size: 50px;
+  }
+
+  .flip-clock-wrapper ul li a div.down {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  .flip-clock-wrapper ul li a div.up:after {
+    top: 38px;
+    height: 2px;
+  }
+
+  .hp-header__countdown .flip-clock-divider.hours .flip-clock-label {
+    right: -65px;
+  }
+
+  .hp-header__countdown .flip-clock-divider.minutes .flip-clock-label {
+    right: -75px;
+  }
 }
 
 /* ==== Google Map of Wedding Location ==== */
