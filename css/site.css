@@ -230,16 +230,36 @@ body {
 
 .hp-timeline li .timeline-panel {
   transition: transform .2s ease-in-out;
-  transform-origin: right;
 }
 
-.hp-timeline li.timeline-inverted .timeline-panel {
-  transform-origin: left;
+@media (max-width: 768px) {
+  /* On small screens, all panels appear on right-hand side. */
+  .hp-timeline li .timeline-panel {
+    transform-origin: left;
+  }
+
+  /* On small screens, scaling X doesn't work; just scale only Y instead. */
+  .hp-timeline li:hover .timeline-panel,
+  .hp-timeline li:focus .timeline-panel{
+    transform: scaleY(1.1);
+  }
 }
 
-.hp-timeline li:hover .timeline-panel,
-.hp-timeline li:focus .timeline-panel{
-  transform: scale(1.1);
+@media (min-width: 768px) {
+  /* On larger screens, normal panels are on left-hand side. */
+  .hp-timeline li .timeline-panel {
+    transform-origin: right;
+  }
+
+  /* And inverted panels are on right-hand side. */
+  .hp-timeline li.timeline-inverted .timeline-panel {
+    transform-origin: left;
+  }
+
+  .hp-timeline li:hover .timeline-panel,
+  .hp-timeline li:focus .timeline-panel{
+    transform: scale(1.1);
+  }
 }
 
 /* ==== Timeline Icons ==== */
@@ -291,7 +311,7 @@ body {
 }
 
 /* Attribution takes up space so reduce padding below. */
-.thumbnail .caption {
+.hp-thumbnail .thumbnail .caption {
   padding-top: 0;
   margin-top: -10px;
 }
