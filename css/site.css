@@ -176,9 +176,13 @@ body {
 
 /* Leading text below header. */
 .hp-title,
-.hp-lead
-{
+.hp-lead {
   text-align: center;
+}
+
+.hp-lead {
+  /* Darkish grey */
+  color: #737373;
 }
 
 /* Section title style */
