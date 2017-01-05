@@ -51,11 +51,11 @@ function initialiseMap() {
 }
 
 function initialiseCountdown() {
-  const $clock = $('.hp-header__countdown');
-  const weddingDate = new Date(2017, 5, 17, 14);
-  const secondsToWedding = (weddingDate - new Date) * 0.001;
+  var $clock = $('.hp-header__countdown');
+  var weddingDate = new Date(2017, 5, 17, 14);
+  var secondsToWedding = (weddingDate - new Date) * 0.001;
 
-  const clock = $clock.FlipClock(secondsToWedding, {
+  var clock = $clock.FlipClock(secondsToWedding, {
     clockFace: 'DailyCounter',
     countdown: true,
     showSeconds: false,
@@ -64,12 +64,12 @@ function initialiseCountdown() {
 }
 
 function initialiseScrollers() {
-  const $scrollers = $('.hp-scroller');
+  var $scrollers = $('.hp-scroller');
 
   $scrollers.each(function(index, element) {
-    const $element = $(element);
-    const scrollToSelector = $element.data('scroll-to');
-    const $scrollToElement = $(scrollToSelector);
+    var $element = $(element);
+    var scrollToSelector = $element.data('scroll-to');
+    var $scrollToElement = $(scrollToSelector);
 
     $element.on('click', function() {
       $('html,body').animate({
