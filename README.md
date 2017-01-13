@@ -8,7 +8,7 @@ It uses the following technologies and libraries:
 
 * [jQuery](https://jquery.com/) - required for most of the following libraries and frameworks, and just makes things easier.
 * [jQuery UI](https://jqueryui.com/) - provides additional easing functions, used when scrolling to a particular section.
-* [BootStrap](http://getbootstrap.com/) - for reusable compontents and CSS, e.g. navbar, grid system.
+* [Bootstrap](http://getbootstrap.com/) - for reusable compontents and CSS, e.g. navbar, grid system.
 * [FlipClock.js](http://flipclockjs.com/) - for the countdown to the wedding.
 * [Google Fonts](https://fonts.google.com/) - for the nice fonts.
 * [Bootstrap Timeline](http://bootsnipp.com/snippets/featured/timeline-responsive) - for the timeline of the events of the day.
