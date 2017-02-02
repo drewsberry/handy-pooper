@@ -614,8 +614,14 @@ body {
 /* ==== Google Map of Wedding Location ==== */
 
 .hp-map {
-  width: 100%;
   height: 500px;
+  opacity: 0;
+
+  /*transition: opacity .5s ease-in;*/
+}
+
+.hp-map.fade-in {
+  opacity: 1;
 }
 
 .hp-map__info-title {

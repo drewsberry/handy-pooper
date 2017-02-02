@@ -16,40 +16,6 @@ function scrollToTop() {
   }, 'slow', 'swing');
 }
 
-function initialiseMap() {
-  var farnhamCastleLocation = {
-    lat: 51.219032,
-    lng: -0.802639,
-  };
-
-  var mapElement = $('.hp-map').get(0);
-  var map = new google.maps.Map(mapElement, {
-    center: farnhamCastleLocation,
-    zoom: 15
-  });
-
-  var marker = new google.maps.Marker({
-    'title': 'Farnham Castle',
-    position: farnhamCastleLocation,
-    map: map,
-    animation: google.maps.Animation.DROP,
-  });
-
-  var infoWindow = new google.maps.InfoWindow({
-    'title': 'Farnham Castle',
-    content: '<div class="hp-map__info-title">Farnham Castle</div>' +
-             '<div class="hp-map__info">This is where the magic happens!</div>',
-  });
-
-  infoWindow.open(map, marker);
-
-  marker.addListener('click', function() {
-    if (infoWindow.map === null) {
-      infoWindow.open(map, marker);
-    }
-  });
-}
-
 function initialiseCountdown() {
   var $clock = $('.hp-header__countdown');
   var weddingDate = new Date(2017, 5, 17, 14);
@@ -109,18 +75,65 @@ function initialiseScrollToTopButton() {
 // Reveal sections only when you scroll to them with ScrollReveal.js.
 function initialiseReveal() {
   window.sr = ScrollReveal();
+
   sr.reveal('.hp-layout__image', { duration: 1000 });
-  sr.reveal('.hp-map');
   sr.reveal('.gm-style');
   sr.reveal('.hp-timeline .timeline li', { duration: 2000, delay: 50 });
   sr.reveal('.hp-course', { duration: 1000 });
   sr.reveal('.hp-thumbnail', { duration: 2000 }, 200);
+
+  return sr;
+}
+
+function initialiseMap(scrollReveal) {
+  var farnhamCastleLocation = {
+    lat: 51.219032,
+    lng: -0.802639,
+  };
+
+  var mapElement = $('.hp-map').get(0);
+  var map = new google.maps.Map(mapElement, {
+    center: farnhamCastleLocation,
+    zoom: 15,
+  });
+
+  var marker = new google.maps.Marker({
+    'title': 'Farnham Castle',
+    position: farnhamCastleLocation,
+    map: map,
+    animation: google.maps.Animation.DROP,
+  });
+
+  var infoWindow = new google.maps.InfoWindow({
+    'title': 'Farnham Castle',
+    content: '<div class="hp-map__info-title">Farnham Castle</div>' +
+             '<div class="hp-map__info">This is where the magic happens!</div>',
+  });
+
+  infoWindow.open(map, marker);
+
+  marker.addListener('click', function () {
+    if (infoWindow.map === null) {
+      infoWindow.open(map, marker);
+    }
+  });
+
+  // Initialise with scroll reveal only after map has loaded.
+  google.maps.event.addListener(map, 'bounds_changed', function () {
+    // Event fires after load; only want this to run once on load.
+    google.maps.event.clearListeners(map, 'bounds_changed');
+
+    var $map = $('.hp-map');
+
+    $map.addClass('fade-in');
+    scrollReveal.reveal('.hp-map');
+  });
 }
 
 $(function() {
-  initialiseMap();
   initialiseCountdown();
   initialiseScrollers();
   initialiseScrollToTopButton();
-  initialiseReveal();
+  var scrollReveal = initialiseReveal();
+  initialiseMap(scrollReveal);
 });
