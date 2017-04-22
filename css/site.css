@@ -421,6 +421,22 @@ body {
   background: #9dEbff;
 }
 
+.hp-button .hp-phone-number {
+  /* Prevent word wrapping mid-phone number. */
+  display: inline-block;
+}
+
+.hp-button__container {
+  text-align: center;
+}
+
+.hp-button__container > .hp-button {
+  width: 80%;
+  max-width: 300px;
+  white-space: normal;
+  font-size: 20pt;
+}
+
 .hp-back-to-top {
   cursor: pointer;
   position: fixed;
@@ -656,6 +672,54 @@ body {
 
 #gift-list .hp-layout__image {
   background-image: url(../images/present.jpg);
+}
+
+#gift-list .hp-actions__container {
+  text-align: center;
+}
+
+#gift-list .hp-actions__container .hp-actions .hp-button {
+  display: inline-block;
+}
+
+#gift-list .hp-actions__container .hp-actions .hp-button {
+  max-width: 49%;
+  white-space: normal;
+}
+
+#gift-list .hp-actions__container .hp-actions .hp-button + .hp-button {
+  /* Hand-tuned so that buttons wrap at approximately same width .*/
+  max-width: 43.8%;
+}
+
+/* ==== Google Play and App Store badges ==== */
+
+.hp-badge__container > a {
+  text-decoration: none;
+}
+
+.hp-badge__container {
+  text-align: center;
+}
+
+.hp-badge__apple,
+.hp-badge__google {
+  width: 46%;
+  margin: 0 6px;
+  transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+  .hp-badge__apple,
+  .hp-badge__google {
+    margin: 0 4px;
+    width: 44%;
+  }
+}
+
+.hp-badge__apple:hover,
+.hp-badge__google:hover {
+  transform: scale(1.1);
 }
 
 /* ==== Fonts ==== */
