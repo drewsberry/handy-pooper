@@ -1,4 +1,5 @@
 # Vim files
 .*.swp
+.*.swo
 *~
 .vimsession
