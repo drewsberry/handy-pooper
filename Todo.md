@@ -1,4 +1,4 @@
-# Todo
+# Todo # this is an amazing project
 
 * Once the site has been deployed, restrict the Google Maps API key to just the handypooper domain.
 * ~~Optimise for mobile, particularly redoing the dual-column to use a Bootstrap grid.~~
